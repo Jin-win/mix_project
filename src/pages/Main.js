@@ -1,10 +1,27 @@
 import React from "react";
-import { Grid } from "../elements/index";
+import { Button, Grid } from "../elements/index";
+import { history } from "../redux/configureStore";
 
 const Main = () => {
   return (
     <React.Fragment>
-      <Grid>메인</Grid>
+      <Grid>
+        <Grid padding="16px">
+          <Button
+            text="PostList보기"
+            _onClick={() => {
+              history.push("/postlist");
+            }}
+          ></Button>
+          &nbsp;
+          <Button
+            text="성격테스트"
+            _onClick={() => {
+              history.push("/mytest");
+            }}
+          ></Button>
+        </Grid>
+      </Grid>
     </React.Fragment>
   );
 };

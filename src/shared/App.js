@@ -9,6 +9,8 @@ import Main from "../pages/Main";
 import Header from "../components/Header";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
+import PostList from "../pages/PostList";
+import MyTest from "../pages/MyTest";
 
 import { actionCreators as userActions } from "../redux/modules/user";
 import { useDispatch } from "react-redux";
@@ -33,6 +35,8 @@ function App() {
         <Route path="/" exact component={Main} />
         <Route path="/login" exact component={Login} />
         <Route path="/signup" exact component={Signup} />
+        <Route path="/postlist" exact component={PostList} />
+        <Route path="/mytest" exact component={MyTest} />
       </ConnectedRouter>
     </React.Fragment>
   );
